@@ -26,11 +26,13 @@ The scope of the project encompasses the implementation of a deep learning-drive
 
 • Video Steganography
 
+• Encoding / Decoding
+
 • Auto Encoder
 
-• Convolutional Neural Network
+• Convolutional Neural Network (CNN)
 
-• Convolutional Auto Encoder
+• Convolutional Auto Encoder (CAE)
 
 #
 ## Hardware Requirements:
