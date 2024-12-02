@@ -1,4 +1,4 @@
-# Deep-Learning-Based-Video-in-Video-Steganography
+# Deep-Learning-Based-Video-in-Video-Steganography (In Progress)
 
 ## Introduction
 
@@ -46,7 +46,9 @@ The scope of the project encompasses the implementation of a deep learning-drive
 • **Storage:** High-speed storage such as a 512 GB SSD will be required to efficiently manage large video and audio datasets that can ensure fast loading and processing.
 
 #
-## Task Accomplished
+# Task Accomplished
+
+## Video Segment:
 
 • **Data Collection:** During the data collection phase of our video steganography project, we meticulously gathered and prepared a substantial dataset. We collected a total of 644 videos for both the cover and secret video categories, ensuring consistency by trimming each video to a uniform length of 15 seconds. To enhance playback smoothness, we set the frame rate of all videos to 30 frames per second. Additionally, we reduced the number of frames in each video folder from 450 to 300 to streamline the dataset. As a result, our efforts culminated in a robust dataset comprising 644×300×2 images, providing a solid foundation for further work on the project.
 
@@ -81,16 +83,14 @@ image. This network processes the image through a series of convolutional layers
 network produces the revealed secret image, utilizing a specific convolutional setup to
 refine the output.
 
-#
-## System Flowchart
+### System Flowchart
 
 **Encoder:**
 
 
 **Decoder:** 
 
-#
-## Video Steganography Model Training
+### Video Steganography Model Training
 
 The training phase for the *Video-in-Video Steganography* project aimed to optimize the embedding (hiding) and extraction (reveal) of hidden videos within cover videos using a deep learning-based approach. The model was trained for **90 epochs**, focusing on minimizing both the hiding and reveal losses while improving the respective accuracies.
 
@@ -132,9 +132,9 @@ The training process monitored four key metrics:
 The training process successfully prepared the model for embedding and extracting video content in a steganographic manner. With hiding accuracy stabilizing at over **62%** and reveal accuracy surpassing **85%**, the model demonstrates a promising capability for real-world application. Future work could focus on further optimizing the hiding task and exploring techniques to reduce training duration without compromising accuracy.  
 
 #
-## Audio Data Collection
+## Audio Segment:
 
-For the Audio Steganography project, we manually collected and prepared a diverse dataset of audio files to train, validate, and test our model effectively. The audio files were recorded from various sources, with recordings varying in length. To ensure uniformity, each recording was clipped into 10-second segments. After processing, we obtained a total of 8,000 audio files, each exactly 10 seconds long.
+• **Data Collection and Preprocessing:** For the Audio Steganography project, we manually collected and prepared a diverse dataset of audio files to train, validate, and test our model effectively. The audio files were recorded from various sources, with recordings varying in length. To ensure uniformity, each recording was clipped into 10-second segments. After processing, we obtained a total of 8,000 audio files, each exactly 10 seconds long.
 
 The original audio recordings were in stereo format, which is not supported by our model. To address this, we converted all stereo audio files into mono format, making them compatible with the model's requirements.
 
@@ -142,8 +142,8 @@ The dataset is structured within a main folder containing three subfolders: trai
 
 In summary, the dataset consists of 10-second mono audio clips, organized and preprocessed to suit the requirements of the project, enabling efficient model training and evaluation.
 
-#
-## Audio Steganography Model Architecture Development
+
+### Audio Steganography Model Architecture Development
 
 #
 ## Task Remaining
