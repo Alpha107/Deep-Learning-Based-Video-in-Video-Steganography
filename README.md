@@ -122,6 +122,9 @@ The training process monitored four key metrics:
 
 ### Graphs and Plots
 
+![download](https://github.com/user-attachments/assets/0e480dd8-25d1-4cfa-a868-27dee7469c4c)
+
+
 ### Conclusion  
 
 The training process successfully prepared the model for embedding and extracting video content in a steganographic manner. With hiding accuracy stabilizing at over **62%** and reveal accuracy surpassing **85%**, the model demonstrates a promising capability for real-world application. Future work could focus on further optimizing the hiding task and exploring techniques to reduce training duration without compromising accuracy.  
