@@ -78,7 +78,7 @@ image. This network processes the image through a series of convolutional layers
 network produces the revealed secret image, utilizing a specific convolutional setup to
 refine the output.
 
-### System Flowchart
+ • **System Flowchart**
 
 **Encoder:**
 
@@ -89,7 +89,7 @@ refine the output.
 
 The training phase for the *Video-in-Video Steganography* project aimed to optimize the embedding (hiding) and extraction (reveal) of hidden videos within cover videos using a deep learning-based approach. The model was trained for **90 epochs**, focusing on minimizing both the hiding and reveal losses while improving the respective accuracies.
 
-### Training Overview  
+Training Overview  
 
 The training process monitored four key metrics:  
 1. **Loss**: Overall loss, hiding loss, and reveal loss during training.  
