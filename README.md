@@ -85,7 +85,7 @@ refine the output.
 
 **Decoder:** 
 
-### Video Steganography Model Training
+• **Video Steganography Model Training**
 
 The training phase for the *Video-in-Video Steganography* project aimed to optimize the embedding (hiding) and extraction (reveal) of hidden videos within cover videos using a deep learning-based approach. The model was trained for **90 epochs**, focusing on minimizing both the hiding and reveal losses while improving the respective accuracies.
 
