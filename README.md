@@ -119,9 +119,6 @@ The training process monitored four key metrics:
 2. **Balanced Performance on Training and Validation**:  
    - While validation losses fluctuated slightly, they remained close to training losses, showing that the model generalized well.  
 
-3. **Plateau in Performance**:  
-   - After epoch 75, improvements in both loss and accuracy began to plateau, suggesting convergence.  
-
 4. **Challenges in Hiding Task**:  
    - The hiding task showed a slower improvement compared to the reveal task, which could suggest a higher complexity in encoding features invisibly within the cover video.  
 
