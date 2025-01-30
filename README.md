@@ -41,8 +41,6 @@ The scope of the project encompasses the implementation of a deep learning-drive
 • **Storage:** High-speed storage such as a 512 GB SSD will be required to efficiently manage large video and audio datasets that can ensure fast loading and processing.
 
 #
-# Task Accomplished
-
 ## Video Segment:
 
 • **Data Collection:** During the data collection phase of our video steganography project, we meticulously gathered and prepared a substantial dataset. We collected a total of 644 videos for both the cover and secret video categories, ensuring consistency by trimming each video to a uniform length of 15 seconds. To enhance playback smoothness, we set the frame rate of all videos to 30 frames per second. Additionally, we reduced the number of frames in each video folder from 450 to 300 to streamline the dataset. As a result, our efforts culminated in a robust dataset comprising 644×300×2 images, providing a solid foundation for further work on the project.
@@ -51,7 +49,7 @@ The scope of the project encompasses the implementation of a deep learning-drive
 
 • **Model Architecture Building:** For the model training phase, a comprehensive neural network architecture tailored for video steganography is being developed. The model is composed of several key components, each designed to perform specific functions in the steganography process
 
-![Screenshot 2024-10-19 202304](https://github.com/user-attachments/assets/631427d3-2b11-40f7-9e1d-9a9a1c020ab3)
+![model_architecture](https://github.com/user-attachments/assets/48978160-e1ed-436a-b9fa-d455c27b6df5)
 
 **Secret Encoding Block**
 
@@ -82,12 +80,15 @@ refine the output.
 
 **Encoder:**
 
+![flowchart_encoder drawio](https://github.com/user-attachments/assets/2cd489fe-b376-4a11-b9cd-a3bab08d6522)
 
 **Decoder:** 
 
+![flowchart_decoder drawio](https://github.com/user-attachments/assets/4c3c56b5-bbc8-4f0e-b47d-eb29bac0bdf5)
+
 • **Video Steganography Model Training**
 
-The training phase for the *Video-in-Video Steganography* project aimed to optimize the embedding (hiding) and extraction (reveal) of hidden videos within cover videos using a deep learning-based approach. The model was trained for **90 epochs**, focusing on minimizing both the hiding and reveal losses while improving the respective accuracies.
+The training phase for the *Video-in-Video Steganography* project aimed to optimize the embedding (hiding) and extraction (reveal) of hidden videos within cover videos using a deep learning-based approach. The model was trained for **100 epochs**, focusing on minimizing both the hiding and reveal losses while improving the respective accuracies.
 
 Training Overview  
 
@@ -99,11 +100,7 @@ The training process monitored four key metrics:
 
 ### Key Epoch Snapshots  
 
-| **Epoch** | **Loss** | **Hiding Loss** | **Reveal Loss** | **Hiding Accuracy** | **Reveal Accuracy** | **Validation Loss** | **Validation Hiding Loss** | **Validation Reveal Loss** | **Validation Hiding Accuracy** | **Validation Reveal Accuracy** |
-|-----------|----------|-----------------|-----------------|----------------------|---------------------|----------------------|----------------------------|----------------------------|--------------------------------|--------------------------------|
-| 1         | 1.178    | 0.218           | 1.281           | 57.82%              | 35.64%             | 0.971                | 0.291                      | 0.907                      | 52.04%                        | 22.26%                        |
-| 45        | 0.084    | 0.043           | 0.054           | 63.11%              | 81.39%             | 0.070                | 0.043                      | 0.033                      | 62.31%                        | 85.17%                        |
-| 90        | 0.076    | 0.040           | 0.048           | 64.92%              | 83.51%             | 0.064                | 0.042                      | 0.029                      | 62.82%                        | 85.51%                        |
+![VideoResult](https://github.com/user-attachments/assets/e8df4c41-08ed-4fc3-9aab-8a7b36d21a10)
 
 ### Observations  
 
@@ -120,14 +117,6 @@ The training process monitored four key metrics:
 4. **Challenges in Hiding Task**:  
    - The hiding task showed a slower improvement compared to the reveal task, which could suggest a higher complexity in encoding features invisibly within the cover video.  
 
-### Graphs and Plots
-
-![download](https://github.com/user-attachments/assets/0e480dd8-25d1-4cfa-a868-27dee7469c4c)
-
-
-### Conclusion  
-
-The training process successfully prepared the model for embedding and extracting video content in a steganographic manner. With hiding accuracy stabilizing at over **62%** and reveal accuracy surpassing **85%**, the model demonstrates a promising capability for real-world application. Future work could focus on further optimizing the hiding task and exploring techniques to reduce training duration without compromising accuracy.  
 
 #
 ## Audio Segment:
@@ -141,7 +130,26 @@ The dataset is structured within a main folder containing three subfolders: trai
 In summary, the dataset consists of 10-second mono audio clips, organized and preprocessed to suit the requirements of the project, enabling efficient model training and evaluation.
 
 
-### Audio Steganography Model Architecture Development
+• **Audio Steganography Model Architecture Development:**
+
+In the Secret Encoding Block, the secret audio undergoes preprocessing through a trim and pad operation, ensuring that its length aligns with the cover audio. This step is crucial to maintain consistency in the encoding process. The cover audio is then transformed using the Short-Time Fourier Transform (STFT), which converts the audio signals into spectrograms, enabling the use of deep learning techniques for embedding. By representing audio in the frequency domain, STFT provides a structured format that convolutional neural networks (CNNs) can efficiently process.
+
+Once transformed, the data flows into the Concealment Block, where a series of convolutional layers are applied. These layers, represented by 3×3 kernel convolutions, learn hierarchical features that blend the secret audio into the cover audio spectrogram. The use of multiple convolutional layers helps in refining the feature extraction and fusion process, ensuring that the embedded secret information remains imperceptible while preserving the original structure of the cover audio. The output of this block is the Stego Audio, which sounds nearly identical to the original cover audio but contains the hidden secret information.
+
+The Decoding Block is responsible for retrieving the hidden secret audio from the stego audio. This block mirrors the concealment process by applying a series of convolutional layers, progressively reconstructing the embedded spectrogram into its original form. Once the transformation is complete, the extracted spectrogram is converted back into an audio signal, revealing the Secret Audio. The effectiveness of this architecture relies on the ability of the deep learning model to learn mappings between cover and secret spectrograms, allowing for accurate encoding and decoding with minimal distortion.
+
+
+![audio_model_architecture](https://github.com/user-attachments/assets/bf16fb2e-e8b5-4c56-a241-798a90400319)
+
+• **Audio Steganography Model Training**
+
+The training phase for the *Video-in-Video Steganography* project aimed to optimize the embedding (hiding) and extraction (reveal) of audios using a deep learning-based approach. The model was trained for **154 epochs**, focusing on minimizing both the hiding and reveal losses while improving the respective accuracies.
+
+
+### Key Epoch Snapshots  
+
+![AudioResult](https://github.com/user-attachments/assets/0fb228b5-c050-484b-8992-3d52232ccce7)
+
 
 #
 ## Task Remaining
