@@ -114,7 +114,7 @@ The training process monitored four key metrics:
 
 1. **Steady Improvement in Loss and Accuracy**:  
    - Loss values (both hiding and reveal) showed consistent reduction across epochs, indicating effective learning.  
-   - The reveal accuracy improved significantly, reaching over **85%** on the validation set by the final epoch.  
+   - The reveal accuracy improved significantly, reaching over **95%** on the validation set by the final epoch.  
 
 2. **Balanced Performance on Training and Validation**:  
    - While validation losses fluctuated slightly, they remained close to training losses, showing that the model generalized well.  
