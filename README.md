@@ -149,7 +149,7 @@ The Decoding Block is responsible for retrieving the hidden secret audio from th
 
 ### **Audio Steganography Model Training**
 
-The training phase for the *Video-in-Video Steganography* project aimed to optimize the embedding (hiding) and extraction (reveal) of audios using a deep learning-based approach. The model was trained for **154 epochs**, focusing on minimizing both the hiding and reveal losses while improving the respective accuracies.
+The training phase for the *Video-in-Video Steganography* project also aimed to optimize the embedding (hiding) and extraction (reveal) of audios using a deep learning-based approach. The model was trained for **154 epochs**, focusing on minimizing both the hiding and reveal losses while improving the respective accuracies.
 
 ### Key Epoch Snapshots  
 
